@@ -51,12 +51,12 @@ print(df2)
 
 
 df3 = df2.head(15)
-df3.plot.bar(x = "Country Name", y = ['2011', '2013', '2015', '2017', '2019', '2021'], figsize = (15,5),edgecolor = "white")
+df3.plot.bar(x = "Country Name", y = ['2011', '2013', '2015', '2017', '2019', '2021'], figsize = (15,5), edgecolor = "white")
 mtplt.title("Agricultural land (% of land area)")
 mtplt.show()
 
 
-cleaned_df2=df2.drop(columns = ["Indicator Name", "Country Name", "2021"], axis = 1 )
+cleaned_df2 = df2.drop(columns = ["Indicator Name", "Country Name", "2021"], axis = 1 )
 print(cleaned_df2)
 
 
@@ -94,7 +94,7 @@ fig = mtplt.figure(figsize = (15,9))
 
 
 #plotting the results
-sea.scatterplot(data = cleaned_df2, x = "2012", y = "2020", hue = label)
+sea.scatterplot(data = cleaned_df2 , x = "2012", y = "2020", hue = label)
 mtplt.show()
 
 
@@ -103,13 +103,13 @@ fig = mtplt.figure(figsize = (15,9))
 
 
 #plot the scatter plot using seaborn and scatterplot()function
-sea.scatterplot(data = cleaned_df2, x = "2012", y = "2020", hue = label)
+sea.scatterplot(data = cleaned_df2 , x = "2012", y = "2020", hue = label)
 x = kmeans_app.cluster_centers_[:,0]
 y = kmeans_app.cluster_centers_[:,1]
 
 
 #plot the scatter plot with centroids
-mtplt.scatter(x,y,marker = "o", c = "r", s = 90, label = "centroids")
+mtplt.scatter(x , y , marker = "o", c = "r", s = 90, label = "centroids")
 
 
 #shows the labelling of the graph data
@@ -147,9 +147,9 @@ def curvve_fitter():
     print(param_cov)
     ans = abs(param[0]*(np.sin(param[1]*a)))
     fig = mtplt.figure(figsize = (15,9))
-    sea.scatterplot(data = cleaned_df2, x = "2012", y = "2020", hue = label)
-    mtplt.plot(a, b, 'o', color ='red', label ="centroids")
-    mtplt.plot(a, ans, '--', linewidth = 4, color ='blue', label = "curve_fit")
+    sea.scatterplot(data = cleaned_df2 , x = "2012" , y = "2020" , hue = label)
+    mtplt.plot(a, b, 'o', color = 'red', label = "centroids")
+    mtplt.plot(a, ans, '--', linewidth = 4, color = 'blue', label = "curve_fit")
     mtplt.legend()
     mtplt.show()
 curvve_fitter()
