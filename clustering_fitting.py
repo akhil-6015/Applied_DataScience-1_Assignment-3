@@ -1,4 +1,3 @@
-#importing libraries to handle the dataset
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as mtplt
@@ -121,14 +120,12 @@ mtplt.show()
     It takes in the cluster centers, which are the x and y coordinates of the centroids, and uses a sine model 
     to fit the data, as well as output the coefficients and covariance of the coefficients. 
     It also plots the centroids and the fitted curve.
-
     Parameters:
         a (list): list of x coordinates of the centroids
         x (float): the coefficient of the sine function
         y (float): the coefficient of the sine function
         z (float): the coefficient of the sine function
         u (float): the coefficient of the sine function
-
     Returns:
         ans (list): list of fitted y coordinates
     """
@@ -153,8 +150,3 @@ def curvve_fitter():
     mtplt.legend()
     mtplt.show()
 curvve_fitter()
-
-
-
-
-
