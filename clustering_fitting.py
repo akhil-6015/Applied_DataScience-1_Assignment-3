@@ -56,7 +56,7 @@ mtplt.title("Agricultural land (% of land area)")
 mtplt.show()
 
 
-cleaned_df2 = df2.drop(columns = ["Indicator Name", "Country Name", "2021"], axis = 1 )
+cleaned_df2=df2.drop(columns = ["Indicator Name", "Country Name", "2021"], axis = 1 )
 print(cleaned_df2)
 
 
@@ -109,7 +109,7 @@ y = kmeans_app.cluster_centers_[:,1]
 
 
 #plot the scatter plot with centroids
-mtplt.scatter(x , y , marker = "o", c = "r", s = 90, label = "centroids")
+mtplt.scatter(x, y, marker = "o", c = "r", s = 90, label = "centroids")
 
 
 #shows the labelling of the graph data
