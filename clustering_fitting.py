@@ -121,7 +121,6 @@ mtplt.show()
     Returns:
         ans (list): list of fitted y coordinates
     """
-   
 def curvve_fitter():
     a = kmeans_app.cluster_centers_[:,0]
     b = kmeans_app.cluster_centers_[:,1]
